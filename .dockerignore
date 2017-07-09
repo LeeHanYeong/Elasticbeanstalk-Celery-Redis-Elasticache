@@ -1,0 +1,7 @@
+.python-version
+.git
+.gitignore
+front/
+**/db.sqlite3
+.media/
+.static_root/

@@ -1,0 +1,11 @@
+{
+    "docker": {
+        "DockerfileBaseName": "eb-celery",
+        "rootImageName": "ubuntu:16.04",
+        "dockerHubImageName": "azelf/eb-celery"
+    },
+    "common": {
+        "appName": "eb-celery",
+        "defaultDBName": "eb_celery_redis_elasticache"
+    }
+}

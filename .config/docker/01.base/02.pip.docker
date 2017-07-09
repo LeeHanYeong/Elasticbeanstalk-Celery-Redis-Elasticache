@@ -1,0 +1,6 @@
+ENV         LANG C.UTF-8
+
+COPY        .requirements/deploy.txt /srv/deploy.txt
+COPY        .requirements/debug.txt /srv/debug.txt
+RUN         /root/.pyenv/versions/app/bin/pip install -r /srv/deploy.txt
+RUN         /root/.pyenv/versions/app/bin/pip install -r /srv/debug.txt

@@ -1,0 +1,6 @@
+Django<1.12
+pytz==2017.2
+psycopg2<2.8
+Pillow<4.3
+django-storages<1.7
+boto3<1.5
