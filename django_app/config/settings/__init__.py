@@ -1,7 +1,5 @@
-# # config.settings
-# import importlib
-# import os
-#
-# config_module = importlib.import_module(os.environ['DJANGO_SETTINGS_MODULE'])
-# for setting in dir(config_module):
-#     locals()[setting] = getattr(config_module, setting)
+import os
+
+SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
+if not SETTINGS_MODULE or SETTINGS_MODULE == 'config.settings':
+    from .debug import *

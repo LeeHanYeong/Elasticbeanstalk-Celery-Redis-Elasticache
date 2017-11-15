@@ -28,14 +28,14 @@ DATABASES = {
 }
 
 # Celery
-CELERY_BROKER_URL = '{}:{}'.format(
+CELERY_BROKER_URL = 'redis://{}:{}'.format(
     config_secret_debug['django']['celery']['broker_url'],
     config_secret_debug['django']['celery']['broker_port']
 )
-CELERY_RESULT_BACKEND = '{}:{}'.format(
+CELERY_RESULT_BACKEND = 'redis://{}:{}'.format(
     config_secret_debug['django']['celery']['broker_url'],
     config_secret_debug['django']['celery']['broker_port']
 )
+print(CELERY_BROKER_URL)
 print('@@@@@@ DEBUG:', DEBUG)
 print('@@@@@@ ALLOWED_HOSTS:', ALLOWED_HOSTS)
-print('abc')

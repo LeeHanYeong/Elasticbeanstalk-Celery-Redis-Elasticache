@@ -110,7 +110,16 @@ SECRET_KEY = config_secret_common['django']['secret_key']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
-CELERY_IMPORTS = (
-    'config.tasks',
-    'utils.tasks',
-)
+# CELERY_IMPORTS = (
+#     'config.tasks',
+#     'utils.tasks',
+# )
+
+# Email
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config_secret_common['django']['email']['host']
+EMAIL_HOST_USER = config_secret_common['django']['email']['host_user']
+EMAIL_HOST_PASSWORD = config_secret_common['django']['email']['host_password']
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
