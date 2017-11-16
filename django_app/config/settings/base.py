@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_celery_results',
+    'django_celery_beat',
+
     'member',
 ]
 
@@ -110,6 +113,7 @@ SECRET_KEY = config_secret_common['django']['secret_key']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
+CELERY_RESULT_BACKEND = 'django-db'
 # CELERY_IMPORTS = (
 #     'config.tasks',
 #     'utils.tasks',

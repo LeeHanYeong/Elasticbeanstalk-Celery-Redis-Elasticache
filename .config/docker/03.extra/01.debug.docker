@@ -8,7 +8,7 @@ RUN         /root/.pyenv/versions/app/bin/pip install -r /srv/app/.requirements/
 # supervisor파일 복사
 COPY        .config/supervisor/debug/supervisor-uwsgi.conf /etc/supervisor/conf.d/
 COPY        .config/supervisor/debug/supervisor-nginx.conf /etc/supervisor/conf.d/
-COPY        .config/supervisor/debug/supervisor-celery.conf /etc/supervisor/conf.d/
+#COPY        .config/supervisor/debug/supervisor-celery.conf /etc/supervisor/conf.d/
 
 # nginx파일 복사
 COPY        .config/nginx/debug/nginx.conf /etc/nginx/nginx.conf
